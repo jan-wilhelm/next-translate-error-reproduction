@@ -1,16 +1,16 @@
-import fs from "fs";
 import React from "react";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 
-export default function Home() {
+export default function Home(props) {
   const { t } = useTranslation();
   const description = t("home:description");
   const linkName = t("home:more-examples");
 
+  console.log(props);
+
   return (
     <>
-      Hi there!
       <p>{description}</p>
       <Link href="/more-examples">
         <a>{linkName}</a>
@@ -18,9 +18,6 @@ export default function Home() {
     </>
   );
 }
-
-// @ts-ignore
 export async function getStaticProps({ locale }) {
-  // fs.stat("/a.tsx", () => {});
   return { props: { getStaticPropsWorks: true, lang: locale } };
 }

@@ -7,15 +7,8 @@
     "build": "next build",
     "start": "next start"
   },
-  "cacheDirectories": [
-    "node_modules",
-    ".next"
-  ],
-  "browserslist": [
-    "defaults"
-  ],
   "dependencies": {
-    "next": "10.0.1",
+    "next": "10.0.0",
     "next-translate": "1.0.0-experimental.2",
     "react": "16.14.0",
     "react-dom": "16.14.0"
